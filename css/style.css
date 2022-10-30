@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #a8a797;
+  --letter-colour: #faffd7;
+  --highlight-colour: #e1e9ae;
+  --box-colour: #423d3a75;
+}
+
+html {
+  height: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: grid;
+
+  grid-template-areas:
+    "a c"
+    "b c";
+  grid-template-rows: 10% 1fr;
+  grid-template-columns: 12% 1fr;
+  background-color: var(--primary-color);
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "d po1 po2"
+    "d po3 po4"
+    "e about about"
+    "f c1 c2"
+    "f c3 c4"
+    "f c5 c6"
+    "foot foot foot";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 12% 1fr 1fr;
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 10vh;
+}
+#home{
+  text-decoration: none;
+  color: var(--letter-colour);
+}
+#home:hover{
+  color: var(--highlight-colour);
+}
+#image {
+  grid-area: c;
+  background-image: url(../images/main.PNG);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+#title{
+  font-size: 7.5vh;
+  color: var(--primary-color);
+  width: 35vw;
+  padding: 2vh 2vw;
+}
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: foot;
+  color: var(--letter-colour);
+  background-color: #636360;
+  padding: 0.5vh 1vw;
+  font-size: 5 vh;
+}
+#portfolio {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  color: var(--letter-colour);
+  grid-area: d;
+  padding: 2vh;
+}
+#po1 {
+  grid-area: po1;
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% 90%;
+}
+#po1:hover, #po2:hover, #po3:hover, #po4:hover{
+  opacity: 50%;
+}
+#po2 {
+  grid-area: po2;
+  background-image: url(../images/02-portfolio-4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% 90%;
+}
+#po3 {
+  grid-area: po3;
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% 90%;
+}
+#po4 {
+  grid-area: po4;
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% 90%;
+}
+#po1,
+#po2,
+#po3,
+#po4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--letter-colour);
+}
+
+#po1b {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--letter-colour);
+  background: var(--box-colour);
+  height: 20vh;
+  width: 20vw;
+}
+#about {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  color: var(--letter-colour);
+  grid-area: e;
+  padding: 2vh;
+  margin-top: 10vh;
+}
+#aboutimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: about;
+  background-image: url(../images/aboutme.PNG);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: 10vh;
+}
+#abt {
+  font-size: 4.5vh;
+  color: var(--letter-colour);
+  background: var(--box-colour);
+  width: 40vw;
+  margin-left: 5vw;
+  padding: 1vh 1vw;
+}
+#abt h3{
+margin-bottom: 3vh;
+}
+#contacts {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  color: var(--letter-colour);
+  grid-area: f;
+  padding: 2vh;
+  margin-top: 10vh;
+}
+
+#con1b {
+  grid-area: c1;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--box-colour);
+  height: 20vh;
+  width: 30vw;
+}
+
+#con2b {
+  grid-area: c2;
+  align-items: center;
+  background: var(--box-colour);
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 20vh;
+  width: 30vw;
+}
+#con3b{
+  grid-area: c3;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: var(--box-colour);
+  flex-direction: column;
+  height: 20vh;
+  width: 30vw;
+}
+#con4b {
+  grid-area: c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--box-colour);
+  padding: 5vh 5vw;
+  height: 20vh;
+  width: 30vw;
+}
+#con5b {
+  grid-area: c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--box-colour);
+  padding: 5vh 5vw;
+  height: 20vh;
+  width: 30vw;
+}
+#con6b {
+  grid-area: c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--box-colour);
+  padding: 5vh 5vw;
+  height: 20vh;
+  width: 30vw;
+}
+#con1,
+#con2,
+#con3,
+#con4,
+#con5,
+#con6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--letter-colour);
+}
+
+#header {
+  grid-area: a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: var(--primary-color);
+  color: var(--letter-colour);
+  padding-bottom: 8vh;
+}
+
+#menu {
+  grid-area: b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+#menu a {
+  font-family: sans-serif;
+  padding: 10% 0;
+  text-decoration: none;
+  color: var(--letter-colour);
+}
+#menu a:hover {
+  color: var(--highlight-colour);
+}
+#github{
+  text-decoration: none;
+  color: var(--letter-colour);
+}
+/*Media
+@media only screen and (max-width: 400px) {
+  body {
+    display: none;
+  }
+}*/
